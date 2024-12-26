@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto py-8">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Calendar Dashboard</h1>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Communication</button>
+        </header>
+
+        <!-- Notifications Section -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Notifications</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
+                    <p><strong>Overdue Communications:</strong> 5</p>
+                </div>
+                <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4">
+                    <p><strong>Today’s Communications:</strong> 3</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Module -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Admin Module</h2>
+            <div class="bg-white p-4 rounded shadow-md">
+                <h3 class="text-lg font-medium">Company Management</h3>
+                <ul class="list-disc ml-6 mt-2">
+                    <li>Add, edit, and delete companies.</li>
+                    <li>Fields: Name, Location, LinkedIn Profile, Emails, Phone Numbers, Comments, Communication Periodicity.</li>
+                </ul>
+                <h3 class="text-lg font-medium mt-4">Communication Method Management</h3>
+                <ul class="list-disc ml-6 mt-2">
+                    <li>Define methods: LinkedIn Post, Email, Phone Call, etc.</li>
+                    <li>Set sequence and mandatory flags for each method.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Dashboard Table -->
+        <section>
+            <h2 class="text-xl font-semibold mb-4">User Module: Company Communication Overview</h2>
+            <div class="overflow-x-auto bg-white rounded shadow-md">
+                <table class="min-w-full border-collapse">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="py-2 px-4 border-b">Company Name</th>
+                            <th class="py-2 px-4 border-b">Last 5 Communications</th>
+                            <th class="py-2 px-4 border-b">Next Scheduled Communication</th>
+                            <th class="py-2 px-4 border-b">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">Company A</td>
+                            <td class="py-2 px-4 border-b">LinkedIn Post (10th Dec)</td>
+                            <td class="py-2 px-4 border-b">Email (15th Dec)</td>
+                            <td class="py-2 px-4 border-b text-red-500">Overdue</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">Company B</td>
+                            <td class="py-2 px-4 border-b">Phone Call (12th Dec)</td>
+                            <td class="py-2 px-4 border-b">Visit (20th Dec)</td>
+                            <td class="py-2 px-4 border-b text-yellow-500">Due Today</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">Company C</td>
+                            <td class="py-2 px-4 border-b">Email (5th Dec)</td>
+                            <td class="py-2 px-4 border-b">LinkedIn Message (25th Dec)</td>
+                            <td class="py-2 px-4 border-b text-green-500">On Track</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Optional Reporting and Analytics Module -->
+        <section class="mt-8">
+            <h2 class="text-xl font-semibold mb-4">Reporting and Analytics (Optional)</h2>
+            <div class="bg-white p-4 rounded shadow-md">
+                <h3 class="text-lg font-medium">Features</h3>
+                <ul class="list-disc ml-6 mt-2">
+                    <li>Communication Frequency Report: Bar or pie chart showing method usage over time.</li>
+                    <li>Engagement Effectiveness Dashboard: Metrics for successful responses.</li>
+                    <li>Overdue Communication Trends: Trendline or heatmap of overdue tasks.</li>
+                    <li>Downloadable Reports: Export as PDF or CSV.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
